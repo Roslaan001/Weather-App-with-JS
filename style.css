@@ -30,7 +30,7 @@ div.container {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 480px) {
     div.container {
        width: 70%; 
     }
