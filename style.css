@@ -18,9 +18,18 @@ div.container {
     margin: auto;
     text-align: center;
     width: 60%;
-    min-height: 40vh;
+    min-height: 20vh;
     background-color: rgba(255,255,255,0.9);
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+p.hi {
+    width: 90%;
+    font-size: 1.4rem; 
+    font-size:clamp(1.4rem, 1.6rem, 2rem);
+    text-align: center;
+    margin: auto;
+
 }
 
 @media screen and (max-width: 1400px) {
@@ -51,6 +60,7 @@ input[type="text"] {
     padding: 0.5rem;
     border: 2px solid blue;
     padding-bottom: 1rem;
+    outline: none;
 }
 
 @media screen and (min-width: 380px) and (max-width: 600px) {
@@ -60,29 +70,48 @@ input[type="text"] {
 
 }
 
-button {
-    background-color: blue;
-    text-shadow: 2px 2px 5px black ;
-    color: white;
-    padding: 0.8rem 1.8rem;
-    border-radius: 5px;
-    font-weight: bolder;
-    border: none;
+  button {
+    min-width: 100px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
     cursor: pointer;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
-}
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #2c0b8e;
+    color: #2c0b8e;
+  }
+  button:hover {
+    color: #fff;
+  }
+  button:hover:after {
+    width: 100%;
+  }
+  button:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #2c0b8e;
+  }
 
-button:hover {
-    background-color: white;
-    color: blue;
-    text-shadow: none;
-    border: 2px solid black;
-}
+
 
 ::placeholder {
-    font-size: 1.5rem;
-    padding: 0.5rem;
+    font-size: 1.2rem;
+    margin-top: 50px;
+    padding-top: 50px;
 }
 
 .weather-info {
