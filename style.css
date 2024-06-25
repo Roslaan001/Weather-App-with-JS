@@ -32,7 +32,7 @@ div.container {
 
 @media screen and (min-width: 380px) {
     div.container {
-       width: 70%; 
+       width: 90%; 
        min-height: 10vh;
     }
 }
