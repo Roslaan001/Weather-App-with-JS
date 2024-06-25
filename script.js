@@ -38,7 +38,7 @@ function fetchWeather(location) {
 
     .catch((error) => {
         console.error ("Error fetching the weather data:", error);
-        locationElement.textContent = "Wrong city";
+        locationElement.textContent = "Oops! Seems you input a wrong city";
         temperatureElement.textContent = "";
         descriptionElement.textContent = "";
     })
