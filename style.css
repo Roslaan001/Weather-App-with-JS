@@ -23,6 +23,19 @@ div.container {
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
+@media screen and (max-width: 1400px) {
+    div.container {
+       width: 70%; 
+       min-height: 14vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.container {
+       width: 70%; 
+    }
+}
+
 h1 {
     padding-top: 1rem;
     color: blue;
